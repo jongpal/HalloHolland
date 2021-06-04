@@ -1,7 +1,20 @@
 import { Link } from 'react-router-dom';
 import classes from './main-navigator.module.css';
+import UserContext from './../../store/userContext';
+import { useContext, useState } from 'react';
 
 function MainNavigator() {
+  const [isLoggedOut, setLoggedOut] = useState(false);
+
+  const userContext = useContext(UserContext);
+  const isNotAuth = userContext.isAuthenticated === 0;
+
+  function LogOutHandler(event) {
+    event.preventDefault();
+    userContext.removeCurrentUser();
+    setLoggedOut((prev) => true);
+  }
+
   return (
     <header className={classes.header}>
       <div>
@@ -22,9 +35,20 @@ function MainNavigator() {
             <li>
               <Link to="/review">REVIEW</Link>
             </li>
-            <li>
-              <Link to="/sign-in">Sign In</Link>
-            </li>
+            {isNotAuth && (
+              <li>
+                <Link to="/sign-in">Sign in</Link>
+              </li>
+            )}
+            {isNotAuth ? (
+              <li>
+                <Link to="/log-in">Log In</Link>
+              </li>
+            ) : (
+              <li>
+                <button onClick={LogOutHandler}>Log Out</button>
+              </li>
+            )}
           </ul>
         </nav>
       </div>
