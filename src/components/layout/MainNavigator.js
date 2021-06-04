@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import classes from './MainNavigator.module.css';
+import classes from './main-navigator.module.css';
 
 function MainNavigator() {
   return (
@@ -21,6 +21,9 @@ function MainNavigator() {
             </li>
             <li>
               <Link to="/review">REVIEW</Link>
+            </li>
+            <li>
+              <Link to="/sign-in">Sign In</Link>
             </li>
           </ul>
         </nav>

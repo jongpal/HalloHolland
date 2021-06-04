@@ -1,0 +1,20 @@
+/* .div {
+  position: absolute;
+}
+.div button {
+  all: unset;
+  background-color: grey;
+  width: 6rem;
+  height: 2rem;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: grey;
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+} */
+.btnlink {
+  text-decoration: none;
+  text-decoration-color: none;
+  color: white;
+}

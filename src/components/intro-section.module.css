@@ -1,0 +1,64 @@
+.image {
+  width: 100%;
+  height: 100%;
+}
+.cover {
+  position: relative;
+  display: flex;
+  justify-content: stretch;
+}
+.cover img {
+  width: 100%;
+  height: 100%;
+  /* position: absolute; */
+}
+
+.intro {
+  position: absolute;
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+.intro div {
+  width: 100%;
+  height: 100%;
+}
+.intro div button {
+  all: unset;
+  background-color: grey;
+  width: 6rem;
+  height: 2rem;
+  text-align: center;
+  border-radius: 5px;
+  border-color: white;
+  box-shadow: grey;
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+}
+.intro div button:hover {
+  cursor: pointer;
+  transition: 0.4s;
+  transform: scale(0.95);
+}
+.intro h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2.7rem;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+.intro p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.4rem;
+  margin-left: 10%;
+}
+
+/* .btnlink {
+  text-decoration: none;
+  text-decoration-color: none;
+  color: white;
+}  */

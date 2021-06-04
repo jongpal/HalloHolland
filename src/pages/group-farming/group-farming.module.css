@@ -1,0 +1,149 @@
+.sections {
+  margin: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*.farmsummary {
+  margin-top: 5%;
+  border: 1px solid grey;
+  border-radius: 5px;
+  display: flex;
+  height: 55rem;
+  align-content: center;
+  justify-content: center;
+}
+.rectangle {
+  position: relative;
+  margin-top: 20%;
+  width: 70%;
+  height: 60%;
+  border-radius: 10px;
+  background: rgba(238, 232, 175, 0.459);
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+.rectangle div {
+  margin: 5%;
+  border-radius: 5px;
+  z-index: 1;
+}
+.rectangle div:hover {
+  opacity: 0.3;
+  transition: opacity 0.2s;
+}
+.rectangle div:active {
+  transform: scale(0.92);
+}
+.box1 {
+  background: rgba(47, 255, 193, 0.781);
+}
+.box2 {
+  background: rgb(47, 255, 134);
+}
+.box3 {
+  background: rgba(47, 255, 193, 0.781);
+}
+
+.box4 {
+  grid-column: 5 / span 2;
+  background: rgba(47, 255, 193, 0.781);
+}
+.box5 {
+  background: rgb(47, 255, 134);
+  grid-column: 7;
+}
+
+.box6 {
+  grid-row: 2;
+  background: rgb(47, 255, 134);
+}
+.box7 {
+  grid-row: 2;
+  grid-column: 2 / span 5;
+}
+.box8 {
+  background: rgba(47, 255, 193, 0.781);
+}
+.box9 {
+  background: rgba(47, 255, 193, 0.781);
+}
+.box11 {
+  background: rgba(47, 255, 193, 0.781);
+}
+.box12 {
+  grid-row: 3;
+  grid-column: 4 / span 3;
+}
+.box13 {
+  background: rgba(47, 255, 193, 0.781);
+}
+.box14 {
+  grid-row: 4;
+  grid-column: 1 / span 7;
+}
+.box15 {
+  grid-row: 5;
+  grid-column: 1 / span 3;
+  background: rgb(47, 255, 134);
+}
+
+.box16 {
+  grid-row: 5;
+  grid-column: 4 / span 2;
+  background: rgba(47, 255, 193, 0.781);
+}
+.box17 {
+  grid-row: 5;
+  grid-column: 6 / span 2;
+  background: rgba(47, 255, 193, 0.781);
+}
+.r_one {
+  position: absolute;
+  left: 10%;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 50px;
+  margin-top: 50px;
+  border-radius: 2px;
+  z-index: 1;
+  background: rgb(47, 255, 134);
+}
+.r_one p {
+  position: absolute;
+  left: 50px;
+}
+.r_two {
+  left: 10%;
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 50px;
+  margin-top: 90px;
+  z-index: 1;
+  border-radius: 2px;
+  background: rgba(47, 255, 193, 0.781);
+}
+.r_two p {
+  position: absolute;
+  left: 50px;
+}
+ .r_three {
+  left: 10%;
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 50px;
+  margin-top: 120px;
+  z-index: 1;
+  background: white;
+} 
+
+.r_three img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+} 
+*/
