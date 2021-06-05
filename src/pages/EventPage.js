@@ -1,5 +1,11 @@
+import './EventPage.css';
+
 function EventPage() {
-  return <div>EventPage</div>;
+  return (
+  <main>
+    
+  </main>
+  );
 }
 
 export { EventPage };
