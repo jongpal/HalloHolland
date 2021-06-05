@@ -9,6 +9,8 @@ import ApplyPageFirst from './pages/group-farming/ApplyPageFirst';
 import MainNavigator from './components/layout/MainNavigator';
 import SecondApplyPage from './pages/group-farming/SecondApplyPage';
 import SignInPage from './components/auth/SignIn';
+import { ProtectedRoute } from './components/auth/ProtectedRoute';
+import LogInPage from './components/auth/LogInPage';
 
 function App() {
   return (
@@ -33,12 +35,18 @@ function App() {
         <Route path="/sign-in">
           <SignInPage />
         </Route>
-        <Route path="/farming-apply">
-          <ApplyPageFirst />
+        <Route path="/log-in">
+          <LogInPage />
         </Route>
-        <Route path="/farming-apply-second">
-          <SecondApplyPage />
-        </Route>
+        <ProtectedRoute
+          exact
+          path="/farming-apply"
+          componenet={ApplyPageFirst}
+        />
+        <ProtectedRoute
+          path="/farming-apply-second"
+          componenet={SecondApplyPage}
+        />
       </Switch>
     </div>
   );
