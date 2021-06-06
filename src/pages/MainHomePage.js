@@ -4,13 +4,21 @@ import reviewImage from '../review.jpg';
 import boardImage from '../discussion.png';
 import mapImage from '../Koedijkslanden.png';
 import './MainHomePage.css';
+import {useState} from 'react';
+import FarmGroup from '../components/farmGroup';
+
 
 function MainHomePage() {
-  let fgroups = [
+  const [fgroups, setFgroups] = useState( [
     { groupName: 'YAHO', crop: 'Carrots', date: '2021/05/01~' },
     { groupName: 'FIGTING', crop: 'Tomato', date: '2021/04/01~' },
     { groupName: 'MUYAHO', crop: 'Strawberry', date: '2021/06/01~' },
-  ];
+  ]);
+
+  const renderFgroup = fgroups.map(group=>{
+    return(<FarmGroup group={group}/>)
+  })
+
   return (
     <main>
       <div className="mainIntro">
@@ -27,15 +35,12 @@ function MainHomePage() {
 
       <div className="farmingGroups">
         <h2>
-          Currently there are {fgroups.length} farming groups in Urban green
+          Currently there are {fgroups.length} active farming groups in Urban green
         </h2>
-        <div className="fGroups">
-          <div className="fGroup">
-            <div className="groupName">{fgroups[0].groupName}</div>
-            <div className="crop">{fgroups[0].crop}</div>
-            <div className="date">{fgroups[0].date}</div>
-          </div>
+        <div className="activeGroups">
+          {renderFgroup}
         </div>
+        
       </div>
 
       <div className="functionIntro">

@@ -11,6 +11,7 @@ import SecondApplyPage from './pages/group-farming/SecondApplyPage';
 import SignInPage from './components/auth/SignIn';
 import { ProtectedRoute } from './components/auth/ProtectedRoute';
 import LogInPage from './components/auth/LogInPage';
+<<<<<<< HEAD
 import { useContext, useEffect } from 'react';
 import UserContext from './store/userContext';
 import { useCookies } from 'react-cookie';
@@ -48,6 +49,9 @@ function App(props) {
         });
     }
   }, [window.onload]);
+=======
+import EventDetailPage from './pages/EventDetailPage';
+>>>>>>> b5b39d510d97154dc2861f0309dc9b2753ef5f60
 
   return (
     <div>
@@ -85,6 +89,9 @@ function App(props) {
           path="/farming-apply-second"
           componenet={SecondApplyPage}
         />
+        <Route path="/event-detail">
+          <EventDetailPage />
+        </Route>
       </Switch>
     </div>
   );
