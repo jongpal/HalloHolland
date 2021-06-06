@@ -1,17 +1,21 @@
-function Event(imageSrc) {
+import './Event.css';
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+function Event({event}) {
   return (
-  <div className="Event">
-      <div className="image"><img src={}></img></div>
+  <Link className="Event" to={'/event-detail'}>
+      <div className="eventImage"><img src={event.imgSrc}></img></div>
       <div className="mainDescription">
-        <h3>{title}</h3>
-        <p>{description}</p>
+        <h3>{event.title}</h3>
+        <p>{event.subtitle}</p>
       </div>
       <div className="subDescription">
-        <p className="member">{}</p>
-        <p className="">{}</p>
+        <div className="members">Number of Opening:{event.numberOfOpening}</div>
+        <div className="dueDate">Date:{event.date}</div>
       </div>
-  </div>
+  </Link>
   );
 }
 
-export { Event };
+export default Event;

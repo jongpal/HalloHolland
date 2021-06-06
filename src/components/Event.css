@@ -1,0 +1,35 @@
+.Event{
+    width:1000px;
+    height:200px;
+    display:flex;
+    font-size:var( --plain-text);
+    margin:10px 0px;
+    background-color:var(--default-color);
+}
+
+.eventImage{
+    display:inline-block;
+    width:30%;
+    height:100%;
+}
+
+.eventImage>img{
+    width:100%;
+    height:100%;
+}
+
+.Event>.mainDescription{
+    display:inline-block;
+    width:35%;
+    padding: 5px 20px;
+}
+
+.Event>.subDescription{
+    display:inline-block;
+    width:35%;
+    padding: 30px 20px;
+}
+
+.Event>.mainDescription>h3{
+    font-size:var(--title);
+}

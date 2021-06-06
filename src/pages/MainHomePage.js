@@ -4,13 +4,16 @@ import reviewImage from '../review.jpg';
 import boardImage from '../discussion.png';
 import mapImage from '../Koedijkslanden.png';
 import './MainHomePage.css';
+import {useState} from 'react';
+
 
 function MainHomePage() {
-  let fgroups = [
+  const [fgroups, setFgroups] = useState( [
     { groupName: 'YAHO', crop: 'Carrots', date: '2021/05/01~' },
     { groupName: 'FIGTING', crop: 'Tomato', date: '2021/04/01~' },
     { groupName: 'MUYAHO', crop: 'Strawberry', date: '2021/06/01~' },
-  ];
+  ]);
+  
   return (
     <main>
       <div className="mainIntro">

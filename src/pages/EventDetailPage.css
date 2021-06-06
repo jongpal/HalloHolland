@@ -1,0 +1,63 @@
+.event{
+    width:1000px;
+    margin:50px auto;
+    font-size:var(--plain-text);
+}
+
+.event>.abstract{
+    display:flex;
+    
+}
+
+.event>.abstract>.image{
+    width:450px;
+}
+
+.event>.abstract>.image>img{
+    width:100%;
+}
+
+.event>.abstract>.info{
+    padding:0 20px;
+    width:550px;
+}
+
+.event>.abstract>.info>.title{
+    font-size:var(--title);
+    font-weight: bold;
+    text-align: left;
+}
+
+.apply{
+    text-align:right;
+    margin-top:30px;
+}
+
+.applyBtn{
+    font-size:var(--plain-text);
+
+}
+
+.reviewSection{
+    margin:40px 0;
+    border-top:1px solid gray;
+    border-bottom:1px solid gray;
+}
+
+
+.reviewSection>.heading{
+    font-size:var(--title);
+    font-weight: bold;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.reviewSection>.heading>button{
+    font-size:var(--plain-text);
+}
+
+.reviewSection>.reviews{
+    display:flex;
+    justify-content:space-between;
+}

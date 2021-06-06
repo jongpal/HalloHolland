@@ -11,6 +11,7 @@ import SecondApplyPage from './pages/group-farming/SecondApplyPage';
 import SignInPage from './components/auth/SignIn';
 import { ProtectedRoute } from './components/auth/ProtectedRoute';
 import LogInPage from './components/auth/LogInPage';
+import EventDetailPage from './pages/EventDetailPage';
 
 function App() {
   return (
@@ -47,6 +48,9 @@ function App() {
           path="/farming-apply-second"
           componenet={SecondApplyPage}
         />
+        <Route path="/event-detail">
+          <EventDetailPage />
+        </Route>
       </Switch>
     </div>
   );

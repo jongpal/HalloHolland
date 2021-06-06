@@ -1,9 +1,7 @@
-main{
-    background-color: #DCE7C6;
-}
+
 
 .farmingGroups>h2, .location>h2{
-    font-size:50px;
+    font-size:var(--homePage-heading);
     font-weight:bold;
 }
 
@@ -56,7 +54,7 @@ main{
 .function>.description{
     width:50%;
     padding:20px 80px;
-    font-size:30px;
+    font-size:var(--homePage-text);
 }
 
 .location{
