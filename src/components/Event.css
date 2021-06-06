@@ -5,6 +5,9 @@
     font-size:var( --plain-text);
     margin:10px 0px;
     background-color:var(--default-color);
+    text-decoration: none;
+    text-decoration-color: none;
+    color:black;
 }
 
 .eventImage{
@@ -21,7 +24,11 @@
 .Event>.mainDescription{
     display:inline-block;
     width:35%;
-    padding: 5px 20px;
+    padding: 30px 20px;
+}
+
+.Event>.mainDescription>h3{
+    font-weight: bold;
 }
 
 .Event>.subDescription{

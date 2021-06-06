@@ -37,7 +37,9 @@
     font-size:var(--plain-text);
 
 }
-
+.bold{
+    font-weight:bold;
+}
 .reviewSection{
     margin:40px 0;
     border-top:1px solid gray;
@@ -51,9 +53,10 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
+    padding: 20px 0;
 }
 
-.reviewSection>.heading>button{
+.reviewSection>.heading>.btn,.btn-primary{
     font-size:var(--plain-text);
 }
 
