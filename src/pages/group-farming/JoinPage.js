@@ -1,15 +1,23 @@
 import { useRef, useContext } from 'react';
+import { useParams, useHistory } from 'react-router-dom';
 import UserContext from './../../store/userContext';
+import FarmContext from './../../store/farmContext';
 
-function SecondApplyPage(props) {
+function JoinPage(props) {
   const userContext = useContext(UserContext);
+  const farmContext = useContext(FarmContext);
   const nameRef = useRef();
   const emailRef = useRef();
+  const history = useHistory();
 
   let prevPageData = props.location.state;
-  // console.log('what the', userContext.currentUserInfos);
-  const user = userContext.currentUserInfos;
-
+  const { sectorId } = useParams();
+  const user = userContext.currentUserInfos || null;
+  console.log('user', user);
+  function cancelHandler(event) {
+    event.preventDefault();
+    history.replace('/');
+  }
   function submitHandler(event) {
     event.preventDefault();
     const name = nameRef.current.value;
@@ -19,7 +27,10 @@ function SecondApplyPage(props) {
       name,
       email,
     };
-    console.log(data);
+    // originally : add to db , but for here : add to context
+    farmContext.joinSector(user.id, sectorId - 1);
+    console.log(farmContext.sectors[sectorId - 1]);
+    history.replace('/group-farming');
   }
   return (
     <div>
@@ -30,7 +41,7 @@ function SecondApplyPage(props) {
             Name :{' '}
             <input
               type="text"
-              defaultValue={user.name}
+              defaultValue={user.name || null}
               required
               ref={nameRef}
             ></input>
@@ -39,18 +50,19 @@ function SecondApplyPage(props) {
             Email :{' '}
             <input
               type="email"
-              defaultValue={user.email}
+              defaultValue={user.email || null}
               required
               ref={emailRef}
             ></input>
           </label>
           <div>
             <button>Confirm</button>
-            <button>Cancel</button>
+            <button onClick={cancelHandler}>Cancel</button>
           </div>
         </div>
       </form>
     </div>
   );
 }
-export default SecondApplyPage;
+
+export default JoinPage;

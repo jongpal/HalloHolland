@@ -1,0 +1,16 @@
+.firstQList {
+  display: flex;
+  flex-direction: column;
+}
+.firstQList label {
+  margin: 3px;
+  /* color: black;
+  background-color: white;
+  width: 6rem;
+  height: 2rem;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: grey;
+  right: 10%;
+  bottom: 10%; */
+}

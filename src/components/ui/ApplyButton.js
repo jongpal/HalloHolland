@@ -4,7 +4,12 @@ import { Link } from 'react-router-dom';
 function ApplyButton(props) {
   return (
     <div>
-      <Link className={classes.btnlink} to={props.linkTo}>
+      <Link
+        // onSubmit={props.onSubmit}
+        // onClick={props.onClick}
+        className={classes.btnlink}
+        to={props.linkTo}
+      >
         <button>{props.text}</button>
       </Link>
     </div>

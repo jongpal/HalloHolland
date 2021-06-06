@@ -12,7 +12,9 @@ const DATA_APPLY_PAGE = {
     and connect to your neighborhood`,
 };
 
-function ApplyPageFirst() {
+function ApplyPageFirst(props) {
+  let data = props.location.state;
+  console.log('sector data first', data);
   return (
     <div className={classes.sections}>
       {/* introduction */}
@@ -25,7 +27,7 @@ function ApplyPageFirst() {
         btn={false}
       />
       <Card>
-        <ApplyFormFirst />
+        <ApplyFormFirst sector={data} />
       </Card>
     </div>
   );

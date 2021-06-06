@@ -1,12 +1,14 @@
-import { useRef, useContext } from 'react';
+import { useRef, useContext, useEffect } from 'react';
 import UserContext from './../../store/userContext';
 import { useHistory } from 'react-router-dom';
+import { useCookies } from 'react-cookie';
 
 function LogInPage() {
   const userContext = useContext(UserContext);
   const emailRef = useRef();
   const pwdRef = useRef();
   const history = useHistory();
+  const [cookies, setCookie] = useCookies(['user']);
 
   function onSubmit(event) {
     event.preventDefault();
@@ -23,15 +25,25 @@ function LogInPage() {
         }
 
         console.log(data);
-        const isUser = userList.some((user) => {
+        const user_ = userList.filter((user) => {
           return (
             user.email === emailRef.current.value &&
             user.pwd === pwdRef.current.value
           );
-        });
-        console.log(isUser);
-        if (isUser) {
-          userContext.addCurrentUser(userList);
+        })[0];
+        console.log(user_);
+        if (user_) {
+          userContext.addCurrentUser(user_);
+          setCookie('email', user_.email, {
+            path: '/',
+          });
+          // console.log(userContext.currentUserInfos);
+          setCookie('pwd', user_.pwd, {
+            path: '/',
+          });
+          // console.log('cookie email : ', cookies.email);
+          setCookie('id', user_.id, { path: '/' });
+          // cookies.user = user_;
           history.replace('/');
         } else {
           alert('check your id & password');

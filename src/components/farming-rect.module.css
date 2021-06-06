@@ -32,7 +32,8 @@
   transform: scale(0.92);
 }
 .box1 {
-  background: rgba(47, 255, 193, 0.781);
+  grid-column: 1;
+  grid-row: 1;
 }
 .box2 {
   background: rgb(47, 255, 134);
@@ -124,6 +125,13 @@
   position: absolute;
   left: 50px;
 }
+.occupied {
+  background: rgb(47, 255, 134);
+}
+.open {
+  background: rgba(47, 255, 193, 0.781);
+}
+
 /* .r_three {
   left: 10%;
   position: absolute;

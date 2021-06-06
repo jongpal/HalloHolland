@@ -11,8 +11,44 @@ import SecondApplyPage from './pages/group-farming/SecondApplyPage';
 import SignInPage from './components/auth/SignIn';
 import { ProtectedRoute } from './components/auth/ProtectedRoute';
 import LogInPage from './components/auth/LogInPage';
+import { useContext, useEffect } from 'react';
+import UserContext from './store/userContext';
+import { useCookies } from 'react-cookie';
+import DetailPage from './pages/group-farming/DetailPage';
+import JoinPage from './pages/group-farming/JoinPage';
 
-function App() {
+function App(props) {
+  const [cookies, setCookies] = useCookies(['user']);
+  const userContext = useContext(UserContext);
+
+  useEffect(() => {
+    {
+      //cookies.id
+      console.log(cookies.email, cookies.pwd);
+      console.log(cookies.email === undefined, cookies.pwd === undefined);
+      fetch('https://urban-green-935ab-default-rtdb.firebaseio.com/user.json')
+        .then((response) => response.json())
+        .then((data) => {
+          const userList = [];
+          for (const key in data) {
+            userList.push({
+              ...data[key],
+            });
+          }
+          console.log(cookies.email, cookies.pwd);
+          const user_ = userList.filter((user) => {
+            return user.email === cookies.email && user.pwd === cookies.pwd;
+          });
+          console.log('user :', user_[0]);
+          // console.log(Cookies.get('name'));
+          // console.log(userList);
+          userContext.setUserList(userList);
+          userContext.addCurrentUser(user_[0]);
+          // console.log(userContext.currentUserInfos);
+        });
+    }
+  }, [window.onload]);
+
   return (
     <div>
       <MainNavigator />
@@ -38,6 +74,8 @@ function App() {
         <Route path="/log-in">
           <LogInPage />
         </Route>
+        <Route path="/detail/:sectorId" component={DetailPage} />
+        <ProtectedRoute path="/join/:sectorId" component={JoinPage} />
         <ProtectedRoute
           exact
           path="/farming-apply"

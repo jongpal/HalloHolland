@@ -2,16 +2,21 @@ import { Link } from 'react-router-dom';
 import classes from './main-navigator.module.css';
 import UserContext from './../../store/userContext';
 import { useContext, useState } from 'react';
+import { useCookies } from 'react-cookie';
 
 function MainNavigator() {
   const [isLoggedOut, setLoggedOut] = useState(false);
+  const [cookies, setCookie, removeCookie] = useCookies(['user']);
 
   const userContext = useContext(UserContext);
   const isNotAuth = userContext.isAuthenticated === 0;
 
   function LogOutHandler(event) {
     event.preventDefault();
+    removeCookie('email');
+    removeCookie('pwd');
     userContext.removeCurrentUser();
+    // removeCookie("id");
     setLoggedOut((prev) => true);
   }
 

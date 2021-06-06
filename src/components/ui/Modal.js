@@ -3,9 +3,10 @@ import classes from './modal.module.css';
 function Modal(props) {
   return (
     <div className={classes.modal}>
-      <p>{props.text}</p>
-      <button>{props.leftButtonText}</button>
-      <button>{props.rightButtonText}</button>
+      <h2>{props.title}</h2>
+      <p>{props.detail}</p>
+      <button onClick={props.onLeftClick}>{props.leftButtonText}</button>
+      <button onClick={props.onRightClick}>{props.rightButtonText}</button>
     </div>
   );
 }
