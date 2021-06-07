@@ -1,0 +1,24 @@
+.detailmain {
+  width: 80%;
+  margin-left: 10%;
+  padding-left: 5%;
+  padding-top: 5%;
+  border: 1px black solid;
+  display: flex;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  flex-direction: column;
+}
+.detailmain h1 {
+  margin-bottom: 10%;
+}
+.firstdescript {
+  border: 1px rgba(128, 128, 128, 0.363) solid;
+  margin-right: 20%;
+  margin-bottom: 10%;
+}
+.firstdescript h3 {
+  width: 50%;
+  font-weight: 500;
+  border-bottom: 1px rgba(128, 128, 128, 0.486) solid;
+  margin-top: 5%;
+}

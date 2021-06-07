@@ -84,13 +84,17 @@ function DetailPage(props) {
             </table>
           </div>
         </div>
+        <h1>Host : {host.name}</h1>
         <div className={classes.hostdescript}>
-          <h1>Host : {host.name}</h1>
           <div>
             <img src={host.photo} alt="host photo" />
-            <div></div>
-            <div></div>
-            <div></div>
+          </div>
+          <div>
+            <ul>
+              {currSector.intro.map((intro) => {
+                return <li>{intro}</li>;
+              })}
+            </ul>
           </div>
         </div>
         <div>

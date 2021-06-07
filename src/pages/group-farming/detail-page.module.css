@@ -1,3 +1,6 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .detailmain {
   width: 80%;
   margin-left: 10%;
@@ -31,6 +34,10 @@
   font-weight: 500;
   width: 50%;
   border-bottom: 1px rgba(128, 128, 128, 0.486) solid;
+}
+.hostdescript {
+  display: flex;
+  flex-direction: row;
 }
 /* .hostdescript {
   border-bottom: 1px black solid;

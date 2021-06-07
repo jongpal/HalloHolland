@@ -24,14 +24,16 @@ function MainNavigator() {
     <header className={classes.header}>
       <nav>
         <div className={classes.logo}>
-          <Link className={classes.logoLink} to="/">Urban Green</Link>
+          <Link className={classes.logoLink} to="/">
+            Urban Green
+          </Link>
         </div>
         <ul>
           <li>
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/group-farming">Goup Farming</Link>
+            <Link to="/group-farming">Group Farming</Link>
           </li>
           <li>
             <Link to="/event">Event</Link>
@@ -42,13 +44,16 @@ function MainNavigator() {
           <li>
             <Link to="/review">Review</Link>
           </li>
-          
         </ul>
         <div className={classes.auth}>
-        {isNotAuth ? (
-            <Link to="/log-in"><button className="btn btn-primary">Log In</button></Link>
+          {isNotAuth ? (
+            <Link to="/log-in">
+              <button className="btn btn-primary">Log In</button>
+            </Link>
           ) : (
-              <button className="btn btn-primary" onClick={LogOutHandler}>Log Out</button>
+            <button className="btn btn-primary" onClick={LogOutHandler}>
+              Log Out
+            </button>
           )}
         </div>
       </nav>

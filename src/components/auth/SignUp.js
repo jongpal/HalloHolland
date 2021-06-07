@@ -126,7 +126,12 @@ function SignUpPage() {
         </div>
         <div>
           <label htmlFor="preferCrops">crops : </label>
-          <input type="text" id="preferCrops" ref={cropRef} />
+          <input
+            type="text"
+            id="preferCrops"
+            placeholder="crops"
+            ref={cropRef}
+          />
         </div>
         <div>
           <lable htmlFor="timetable">timetable : </lable>

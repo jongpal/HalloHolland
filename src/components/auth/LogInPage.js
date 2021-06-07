@@ -59,18 +59,31 @@ function LogInPage() {
     <div className="Login">
       <h1>Log In to Urban Green</h1>
       <form>
-        
-          {/* <label htmlFor="email_">email : </label> */}
-          <input type="email" id="email_" placeholder="Email" required ref={emailRef} />
-        
-       
-          {/* <label htmlFor="pass">password : </label> */}
-          <input type="password" id="pass" placeholder="Password" required ref={pwdRef} />
-       
-          <button className="btn btn-primary full" onClick={onSubmit}>Log In</button>
-          <Link className="signup" to="/sign-in">Not a memver yet? Sign up now!</Link>
+        {/* <label htmlFor="email_">email : </label> */}
+        <input
+          type="email"
+          id="email_"
+          placeholder="Email"
+          required
+          ref={emailRef}
+        />
+
+        {/* <label htmlFor="pass">password : </label> */}
+        <input
+          type="password"
+          id="pass"
+          placeholder="Password"
+          required
+          ref={pwdRef}
+        />
+
+        <button className="btn btn-primary full" onClick={onSubmit}>
+          Log In
+        </button>
+        <Link className="signup" to="/sign-up">
+          Not a member yet? Sign up now!
+        </Link>
       </form>
-      
     </div>
   );
 }

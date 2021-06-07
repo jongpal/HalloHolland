@@ -1,6 +1,7 @@
 import UserContext from './../../store/userContext';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import classes from './matched-user.module.css';
 
 function MatchedUser(props) {
   const userContext = useContext(UserContext);
@@ -12,11 +13,11 @@ function MatchedUser(props) {
 
   console.log(filteredUser);
   return (
-    <div>
+    <div className={classes.detailmain}>
       <h1>MatchedUser</h1>
       {filteredUser.map((user) => {
         return (
-          <div>
+          <div className={classes.firstdescript}>
             <h3>Name</h3>
             <span>{user.name}</span>
             <h3>Email</h3>

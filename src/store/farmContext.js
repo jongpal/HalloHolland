@@ -28,6 +28,11 @@ export function FarmContextProvider(props) {
       currNum: 3,
       hostId: 1,
       description: 'Neighbors who want to grow healthy vegetables',
+      intro: [
+        'Age : 29',
+        'Have been living in koedijksgarden since forever',
+        'Farming knowledge : novice, not educated',
+      ],
       crop: ['potato'],
       userIds: [1, 2, 3],
     },
@@ -36,6 +41,11 @@ export function FarmContextProvider(props) {
       currNum: 5,
       hostId: 4,
       description: 'Neighbors who got a lot of time to grow crops',
+      intro: [
+        'Age : 29',
+        'Have been living in koedijksgarden since forever',
+        'Farming knowledge : novice, not educated',
+      ],
       crop: ['potato'],
       userIds: [4, 5, 6, 13, 14],
     },
@@ -44,6 +54,7 @@ export function FarmContextProvider(props) {
       currNum: 0,
       hostId: undefined,
       description: undefined,
+      intro: [],
       crop: [],
       userIds: [],
     },
@@ -51,6 +62,7 @@ export function FarmContextProvider(props) {
       maxNum: 5,
       currNum: 3,
       hostId: 10,
+      intro: [],
       crop: ['potato'],
       userIds: [10, 11, 12],
     },
@@ -58,6 +70,7 @@ export function FarmContextProvider(props) {
       maxNum: 5,
       currNum: 5,
       hostId: 16,
+      intro: [],
       crop: ['potato'],
       userIds: [16, 17, 18, 19, 20],
     },
@@ -65,6 +78,7 @@ export function FarmContextProvider(props) {
       maxNum: 5,
       currNum: 5,
       hostId: 21,
+      intro: [],
       crop: ['potato'],
       userIds: [21, 22, 23, 24, 25],
     },
@@ -79,6 +93,7 @@ export function FarmContextProvider(props) {
       maxNum: 5,
       currNum: 3,
       hostId: 29,
+      intro: [],
       crop: ['potato'],
       userIds: [29, 30, 31],
     },
@@ -86,6 +101,7 @@ export function FarmContextProvider(props) {
       maxNum: 5,
       currNum: 3,
       hostId: 32,
+      intro: [],
       crop: ['potato'],
       userIds: [32, 33, 34],
     },
@@ -100,6 +116,7 @@ export function FarmContextProvider(props) {
       maxNum: 5,
       currNum: 5,
       hostId: 38,
+      intro: [],
       crop: ['potato'],
       userIds: [38, 39, 40, 41],
     },
@@ -107,6 +124,7 @@ export function FarmContextProvider(props) {
       maxNum: 5,
       currNum: 3,
       hostId: 42,
+      intro: [],
       crop: ['potato'],
       userIds: [42, 43, 44],
     },
@@ -114,6 +132,7 @@ export function FarmContextProvider(props) {
       maxNum: 5,
       currNum: 3,
       hostId: 45,
+      intro: [],
       crop: ['potato'],
       userIds: [45, 46, 47],
     },
@@ -121,13 +140,21 @@ export function FarmContextProvider(props) {
   const [occupiedSector, setOccupiedSector] = useState([1, 4, 5, 10]);
   // const [joinSectorm setJoinSector] = useState();
 
-  function addSectorHandler(hostId, crop, sectNum, description, maxNum = 5) {
+  function addSectorHandler(
+    hostId,
+    crop,
+    sectNum,
+    description,
+    intro,
+    maxNum = 5
+  ) {
     const newSector = {
       maxNum,
       currNum: 1,
       hostId: hostId,
       crop,
       description,
+      intro,
       users: [hostId],
     };
     setCurrSector((prevSector) => {
