@@ -1,0 +1,71 @@
+.box1 {
+  grid-column: 1;
+  grid-row: 1;
+  /* background: rgba(47, 255, 193, 0.781); */
+}
+.box2 {
+  background: rgb(47, 255, 134);
+}
+.box3 {
+  background: rgba(47, 255, 193, 0.781);
+}
+
+.box4 {
+  grid-column: 5 / span 2;
+  background: rgba(47, 255, 193, 0.781);
+}
+.box5 {
+  background: rgb(47, 255, 134);
+  grid-column: 7;
+}
+
+.box6 {
+  grid-row: 2;
+  background: rgb(47, 255, 134);
+}
+.box7 {
+  grid-row: 2;
+  grid-column: 2 / span 5;
+}
+.box8 {
+  background: rgba(47, 255, 193, 0.781);
+}
+.box9 {
+  background: rgba(47, 255, 193, 0.781);
+}
+.box11 {
+  background: rgba(47, 255, 193, 0.781);
+}
+.box12 {
+  grid-row: 3;
+  grid-column: 4 / span 3;
+}
+.box13 {
+  background: rgba(47, 255, 193, 0.781);
+}
+.box14 {
+  grid-row: 4;
+  grid-column: 1 / span 7;
+}
+.box15 {
+  grid-row: 5;
+  grid-column: 1 / span 3;
+  background: rgb(47, 255, 134);
+}
+
+.box16 {
+  grid-row: 5;
+  grid-column: 4 / span 2;
+  background: rgba(47, 255, 193, 0.781);
+}
+.box17 {
+  grid-row: 5;
+  grid-column: 6 / span 2;
+  background: rgba(47, 255, 193, 0.781);
+}
+.open {
+  background: rgba(47, 255, 193, 0.781);
+}
+.occupied {
+  background: rgb(47, 255, 134);
+}

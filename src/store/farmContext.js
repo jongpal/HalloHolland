@@ -6,7 +6,7 @@ const FarmContext = createContext({
   sectors: [],
   occupiedSector: [],
   // user id 가 들어감
-  addSector: (maxNum) => {},
+  addSector: (hostId, crop, sectNum, description, maxNum = 5) => {},
   joinSector: (userId, sectorNum) => {},
   signOutSector: (userId, sectorNum) => {},
   addToOccupied: (sectorNum) => {},
@@ -27,106 +27,113 @@ export function FarmContextProvider(props) {
       maxNum: 5,
       currNum: 3,
       hostId: 1,
-      crop: 'potato',
+      description: 'Neighbors who want to grow healthy vegetables',
+      crop: ['potato'],
       userIds: [1, 2, 3],
     },
     {
       maxNum: 5,
       currNum: 5,
       hostId: 4,
-      crop: 'potato',
+      description: 'Neighbors who got a lot of time to grow crops',
+      crop: ['potato'],
       userIds: [4, 5, 6, 13, 14],
     },
     {
       maxNum: 5,
-      currNum: 3,
-      hostId: 7,
-      crop: 'potato',
-      userIds: [7, 8, 9],
+      currNum: 0,
+      hostId: undefined,
+      description: undefined,
+      crop: [],
+      userIds: [],
     },
     {
       maxNum: 5,
       currNum: 3,
       hostId: 10,
-      crop: 'potato',
+      crop: ['potato'],
       userIds: [10, 11, 12],
     },
     {
       maxNum: 5,
       currNum: 5,
       hostId: 16,
-      crop: 'potato',
+      crop: ['potato'],
       userIds: [16, 17, 18, 19, 20],
     },
     {
       maxNum: 5,
       currNum: 5,
       hostId: 21,
-      crop: 'potato',
+      crop: ['potato'],
       userIds: [21, 22, 23, 24, 25],
     },
     {
       maxNum: 5,
       currNum: 3,
       hostId: 26,
-      crop: 'potato',
+      crop: ['potato'],
       userIds: [26, 27, 28],
     },
     {
       maxNum: 5,
       currNum: 3,
       hostId: 29,
-      crop: 'potato',
+      crop: ['potato'],
       userIds: [29, 30, 31],
     },
     {
       maxNum: 5,
       currNum: 3,
       hostId: 32,
-      crop: 'potato',
+      crop: ['potato'],
       userIds: [32, 33, 34],
     },
     {
       maxNum: 5,
       currNum: 3,
       hostId: 35,
-      crop: 'potato',
+      crop: ['potato'],
       userIds: [35, 36, 37],
     },
     {
       maxNum: 5,
       currNum: 5,
       hostId: 38,
-      crop: 'potato',
+      crop: ['potato'],
       userIds: [38, 39, 40, 41],
     },
     {
       maxNum: 5,
       currNum: 3,
       hostId: 42,
-      crop: 'potato',
+      crop: ['potato'],
       userIds: [42, 43, 44],
     },
     {
       maxNum: 5,
       currNum: 3,
       hostId: 45,
-      crop: 'potato',
+      crop: ['potato'],
       userIds: [45, 46, 47],
     },
   ]);
   const [occupiedSector, setOccupiedSector] = useState([1, 4, 5, 10]);
   // const [joinSectorm setJoinSector] = useState();
 
-  function addSectorHandler(hostId, maxNum, crop) {
+  function addSectorHandler(hostId, crop, sectNum, description, maxNum = 5) {
     const newSector = {
       maxNum,
-      currNum: 0,
+      currNum: 1,
       hostId: hostId,
       crop,
+      description,
       users: [hostId],
     };
-    setCurrSector((prevSector) => prevSector.concat(newSector));
+    setCurrSector((prevSector) => {
+      prevSector[sectNum - 1] = newSector;
+      return prevSector;
+    });
   }
   function addToOccupiedHandler(sectorNum) {
     setOccupiedSector((prevOccupied) => {

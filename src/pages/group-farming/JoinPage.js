@@ -13,7 +13,7 @@ function JoinPage(props) {
   let prevPageData = props.location.state;
   const { sectorId } = useParams();
   const user = userContext.currentUserInfos || null;
-  console.log('user', user);
+  // console.log('user', user);
   function cancelHandler(event) {
     event.preventDefault();
     history.replace('/');
@@ -41,7 +41,7 @@ function JoinPage(props) {
             Name :{' '}
             <input
               type="text"
-              defaultValue={user.name || null}
+              defaultValue={user ? user.name : null}
               required
               ref={nameRef}
             ></input>
@@ -50,7 +50,7 @@ function JoinPage(props) {
             Email :{' '}
             <input
               type="email"
-              defaultValue={user.email || null}
+              defaultValue={user ? user.email : null}
               required
               ref={emailRef}
             ></input>

@@ -109,114 +109,80 @@ function FarmingRect(props) {
           id="sector-1"
           className={classes.box1 + ' ' + classes.open}
           onClick={boxOnClickListener}
-        >
-          1
-        </div>
+        ></div>
 
         <div
           id="sector-2"
           className={classes.box2}
           onClick={boxOnClickListener}
-        >
-          2
-        </div>
+        ></div>
         <div
           id="sector-3"
           className={classes.box3}
           onClick={boxOnClickListener}
-        >
-          3
-        </div>
+        ></div>
         <div></div>
         <div
           id="sector-4"
           className={classes.box4}
           onClick={boxOnClickListener}
-        >
-          4
-        </div>
+        ></div>
         <div
           id="sector-5"
           className={classes.box5}
           onClick={boxOnClickListener}
-        >
-          5
-        </div>
+        ></div>
         <div
           id="sector-6"
           className={classes.box6}
           onClick={boxOnClickListener}
-        >
-          6
-        </div>
-        <div className={classes.box7} onClick={boxOnClickListener}>
-          7
-        </div>
+        ></div>
+        <div className={classes.box7} onClick={boxOnClickListener}></div>
         <div
           id="sector-7"
           className={classes.box8}
           onClick={boxOnClickListener}
-        >
-          8
-        </div>
+        ></div>
         <div
           id="sector-8"
           className={classes.box9}
           onClick={boxOnClickListener}
-        >
-          9
-        </div>
-        <div className={classes.box10} onClick={boxOnClickListener}>
-          10
-        </div>
+        ></div>
+        <div className={classes.box10} onClick={boxOnClickListener}></div>
         {/* <FarmSingleBox number={10} isOpen={true} onClick={boxOnClickListener} /> */}
         <div
           id="sector9"
           className={classes.box11}
           onClick={boxOnClickListener}
-        >
-          11
-        </div>
+        ></div>
         {/* <FarmSingleBox number={11} isOpen={true} onClick={boxOnClickListener} /> */}
-        <div className={classes.box12} onClick={boxOnClickListener}>
-          12
-        </div>
+        <div className={classes.box12} onClick={boxOnClickListener}></div>
         {/* <FarmSingleBox number={12} isOpen={true} onClick={boxOnClickListener} /> */}
         <div
           id="sector-10"
           className={classes.box13}
           onClick={boxOnClickListener}
-        >
-          13
-        </div>
+        ></div>
         {/* <FarmSingleBox number={13} isOpen={true} onClick={boxOnClickListener} /> */}
-        <div className={classes.box14} onClick={boxOnClickListener}>
-          14
-        </div>
+        <div className={classes.box14} onClick={boxOnClickListener}></div>
         {/* <FarmSingleBox number={14} isOpen={true} onClick={boxOnClickListener} /> */}
         <div
           id="sector-11"
           className={classes.box15}
           onClick={boxOnClickListener}
-        >
-          15
-        </div>
+        ></div>
 
         <div
           id="sector-12"
           className={classes.box16}
           onClick={boxOnClickListener}
-        >
-          16
-        </div>
+        ></div>
         {/* <FarmSingleBox number={16} isOpen={true} onClick={boxOnClickListener} /> */}
         <div
           id="sector-13"
           className={classes.box17}
           onClick={boxOnClickListener}
-        >
-          17
-        </div>
+        ></div>
         {/* <FarmSingleBox number={17} isOpen={true} onClick={boxOnClickListener} /> */}
       </div>
       {showModal && <Backdrop onClick={closeModalHandler} />}

@@ -1,25 +1,35 @@
 import { useRef, useContext } from 'react';
 import UserContext from './../../store/userContext';
+import FarmContext from './../../store/farmContext';
+import { useHistory } from 'react-router-dom';
 
 function SecondApplyPage(props) {
   const userContext = useContext(UserContext);
+  const farmContext = useContext(FarmContext);
+  const history = useHistory();
   const nameRef = useRef();
   const emailRef = useRef();
+  const user = userContext.currentUserInfos;
 
   let prevPageData = props.location.state;
   // console.log('what the', userContext.currentUserInfos);
-  const user = userContext.currentUserInfos;
-
+  console.log('prevPage', prevPageData);
   function submitHandler(event) {
     event.preventDefault();
     const name = nameRef.current.value;
     const email = emailRef.current.value;
-    const data = {
-      ...prevPageData,
-      name,
-      email,
-    };
-    console.log(data);
+    // const data = {
+    //   ...prevPageData,
+    //   name,
+    //   email,
+    // };
+    const crops = prevPageData.preferredCrop;
+    const sectorNumber = prevPageData.sector;
+    const description = prevPageData.description;
+    farmContext.addSector(user.id, crops, sectorNumber, description);
+    const matched = userContext.searchMatch(user.timetable);
+    // console.log(data);
+    history.push('/matched-users', matched);
   }
   return (
     <div>

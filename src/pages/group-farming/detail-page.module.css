@@ -1,0 +1,91 @@
+.detailmain {
+  width: 80%;
+  margin-left: 10%;
+  padding-left: 5%;
+  padding-top: 5%;
+  border: 1px black solid;
+  display: flex;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  flex-direction: column;
+}
+.detailmain div {
+  margin-bottom: 15%;
+}
+.detailmain h1 {
+  width: 70%;
+  border-bottom: 1px rgba(128, 128, 128, 0.486) solid;
+  margin-bottom: 10%;
+  font-weight: bold;
+}
+.firstdescript h2 {
+  width: 50%;
+  font-weight: 500;
+  border-bottom: 1px rgba(128, 128, 128, 0.486) solid;
+}
+.seconddescript h2 {
+  width: 50%;
+  font-weight: 500;
+  border-bottom: 1px rgba(128, 128, 128, 0.486) solid;
+}
+.thirddescript h2 {
+  font-weight: 500;
+  width: 50%;
+  border-bottom: 1px rgba(128, 128, 128, 0.486) solid;
+}
+/* .hostdescript {
+  border-bottom: 1px black solid;
+} */
+.btn {
+  all: unset;
+  border: 1px rgba(0, 0, 0, 0.644) solid;
+  padding: 4px;
+  /* width: 7rem; */
+  margin-right: 5px;
+  border-radius: 5px;
+}
+.btnjoin {
+  all: unset;
+  border: 1px rgba(0, 0, 0, 0.644) solid;
+  padding: 4px;
+  width: 4rem;
+  text-align: center;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+.timetable {
+  table-layout: fixed;
+  background-color: white;
+  border-radius: 5px;
+}
+.timetable thead {
+  border-radius: 5px;
+  background-color: gray;
+}
+.timetable thead th {
+  width: 3rem;
+}
+.timetable tbody {
+  border-radius: 5px;
+  /* border: 1px black solid; */
+}
+/* .timetable tbody td {
+  background-color: rgba(255, 235, 205, 0.438);
+  border: 1px rgba(128, 128, 128, 0.452) solid;
+  width: 2rem;
+} */
+.timetable tbody td:hover {
+  opacity: 0.2;
+  transition: opacity 0.2s;
+}
+.timetable tbody td:visited {
+  background-color: black;
+}
+.normtd {
+  background-color: rgba(255, 235, 205, 0.438);
+  border: 1px rgba(128, 128, 128, 0.452) solid;
+  width: 2rem;
+}
+.clickedcell {
+  background-color: rgba(128, 128, 128, 0.5);
+  /* transition: opacity 0.2s; */
+}

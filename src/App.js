@@ -11,12 +11,13 @@ import SecondApplyPage from './pages/group-farming/SecondApplyPage';
 import SignInPage from './components/auth/SignIn';
 import { ProtectedRoute } from './components/auth/ProtectedRoute';
 import LogInPage from './components/auth/LogInPage';
-<<<<<<< HEAD
 import { useContext, useEffect } from 'react';
 import UserContext from './store/userContext';
 import { useCookies } from 'react-cookie';
 import DetailPage from './pages/group-farming/DetailPage';
 import JoinPage from './pages/group-farming/JoinPage';
+import EventDetailPage from './pages/EventDetailPage';
+import MatchedUser from './pages/group-farming/MatchedUser';
 
 function App(props) {
   const [cookies, setCookies] = useCookies(['user']);
@@ -49,9 +50,6 @@ function App(props) {
         });
     }
   }, [window.onload]);
-=======
-import EventDetailPage from './pages/EventDetailPage';
->>>>>>> b5b39d510d97154dc2861f0309dc9b2753ef5f60
 
   return (
     <div>
@@ -89,6 +87,7 @@ import EventDetailPage from './pages/EventDetailPage';
           path="/farming-apply-second"
           componenet={SecondApplyPage}
         />
+        <ProtectedRoute path="/matched-users" component={MatchedUser} />
         <Route path="/event-detail">
           <EventDetailPage />
         </Route>

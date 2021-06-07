@@ -14,3 +14,40 @@
   right: 10%;
   bottom: 10%; */
 }
+.timetable {
+  table-layout: fixed;
+  background-color: white;
+  border-radius: 5px;
+}
+.timetable thead {
+  border-radius: 5px;
+  background-color: gray;
+}
+.timetable thead th {
+  width: 3rem;
+}
+.timetable tbody {
+  border-radius: 5px;
+  /* border: 1px black solid; */
+}
+/* .timetable tbody td {
+  background-color: rgba(255, 235, 205, 0.438);
+  border: 1px rgba(128, 128, 128, 0.452) solid;
+  width: 2rem;
+} */
+.timetable tbody td:hover {
+  opacity: 0.2;
+  transition: opacity 0.2s;
+}
+.timetable tbody td:visited {
+  background-color: black;
+}
+.normtd {
+  background-color: rgba(255, 235, 205, 0.438);
+  border: 1px rgba(128, 128, 128, 0.452) solid;
+  width: 2rem;
+}
+.clickedcell {
+  background-color: gray;
+  /* transition: opacity 0.2s; */
+}
