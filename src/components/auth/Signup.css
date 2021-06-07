@@ -1,0 +1,31 @@
+.SignUp{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    height: 350px;
+    margin-top:100px;
+}
+
+.SignUp>h1{
+    font-weight: bolder;
+    font-size:var(--title);
+    margin-bottom:50px;
+}
+
+.SignUp>form{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:350px;
+    height: 100%;
+}
+
+.SignUp>form .full{
+    width:100%;
+}
+
+.SignUp>form>input{
+    font-size:var(--plain-text);
+    padding:0.25em;
+    
+}

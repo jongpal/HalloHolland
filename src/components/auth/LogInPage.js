@@ -2,6 +2,8 @@ import { useRef, useContext, useEffect } from 'react';
 import UserContext from './../../store/userContext';
 import { useHistory } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
+import './LoginPage.css';
+import { Link } from 'react-router-dom';
 
 function LogInPage() {
   const userContext = useContext(UserContext);
@@ -54,21 +56,21 @@ function LogInPage() {
       });
   }
   return (
-    <div>
-      <h1>Log In</h1>
+    <div className="Login">
+      <h1>Log In to Urban Green</h1>
       <form>
-        <div>
-          <label htmlFor="email_">email : </label>
-          <input type="email" id="email_" required ref={emailRef} />
-        </div>
-        <div>
-          <label htmlFor="pass">password : </label>
-          <input type="password" id="pass" required ref={pwdRef} />
-        </div>
-        <div>
-          <button onClick={onSubmit}>Log In</button>
-        </div>
+        
+          {/* <label htmlFor="email_">email : </label> */}
+          <input type="email" id="email_" placeholder="Email" required ref={emailRef} />
+        
+       
+          {/* <label htmlFor="pass">password : </label> */}
+          <input type="password" id="pass" placeholder="Password" required ref={pwdRef} />
+       
+          <button className="btn btn-primary full" onClick={onSubmit}>Log In</button>
+          <Link className="signup" to="/sign-in">Not a memver yet? Sign up now!</Link>
       </form>
+      
     </div>
   );
 }

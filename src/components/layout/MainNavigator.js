@@ -22,41 +22,36 @@ function MainNavigator() {
 
   return (
     <header className={classes.header}>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">HOME</Link>
-            </li>
-            <li>
-              <Link to="/group-farming">GROUP FARMING</Link>
-            </li>
-            <li>
-              <Link to="/event">EVENT</Link>
-            </li>
-            <li>
-              <Link to="/board">BOARD</Link>
-            </li>
-            <li>
-              <Link to="/review">REVIEW</Link>
-            </li>
-            {isNotAuth && (
-              <li>
-                <Link to="/sign-in">Sign in</Link>
-              </li>
-            )}
-            {isNotAuth ? (
-              <li>
-                <Link to="/log-in">Log In</Link>
-              </li>
-            ) : (
-              <li>
-                <button onClick={LogOutHandler}>Log Out</button>
-              </li>
-            )}
-          </ul>
-        </nav>
-      </div>
+      <nav>
+        <div className={classes.logo}>
+          <Link className={classes.logoLink} to="/">Urban Green</Link>
+        </div>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/group-farming">Goup Farming</Link>
+          </li>
+          <li>
+            <Link to="/event">Event</Link>
+          </li>
+          <li>
+            <Link to="/board">Board</Link>
+          </li>
+          <li>
+            <Link to="/review">Review</Link>
+          </li>
+          
+        </ul>
+        <div className={classes.auth}>
+        {isNotAuth ? (
+            <Link to="/log-in"><button className="btn btn-primary">Log In</button></Link>
+          ) : (
+              <button className="btn btn-primary" onClick={LogOutHandler}>Log Out</button>
+          )}
+        </div>
+      </nav>
     </header>
   );
 }

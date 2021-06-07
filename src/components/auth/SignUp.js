@@ -1,11 +1,12 @@
 import { useRef, useContext, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import UserContext from './../../store/userContext';
+import UserContext from '../../store/userContext';
 import { useCookies } from 'react-cookie';
 import classes from './signin.module.css';
+import './Signup.css';
 // import axios from 'axios';
 
-function SignInPage() {
+function SignUpPage() {
   const emailRef = useRef();
   const nameRef = useRef();
   const passwordRef = useRef();
@@ -93,20 +94,35 @@ function SignInPage() {
   };
 
   return (
-    <div>
-      <h1>Sign In</h1>
+    <div className="SignUp">
+      <h1>Sign Up</h1>
       <form>
         <div>
-          <label htmlFor="email">email : </label>
-          <input type="email" id="email" required ref={emailRef} />
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            required
+            ref={emailRef}
+          />
         </div>
         <div>
-          <label htmlFor="name">name : </label>
-          <input type="text" id="name" required ref={nameRef} />
+          <input
+            type="text"
+            id="name"
+            placeholder="Full Name"
+            required
+            ref={nameRef}
+          />
         </div>
         <div>
-          <label htmlFor="pwd">password : </label>
-          <input type="password" id="pwd" required ref={passwordRef} />
+          <input
+            type="password"
+            id="pwd"
+            placeholder="Password"
+            required
+            ref={passwordRef}
+          />
         </div>
         <div>
           <label htmlFor="preferCrops">crops : </label>
@@ -153,11 +169,13 @@ function SignInPage() {
           </div>
         </div>
         <div>
-          <button onClick={onSubmit}>Sign In</button>
+          <button className="btn btn-primary full" onClick={onSubmit}>
+            Sign Up
+          </button>
         </div>
       </form>
     </div>
   );
 }
 
-export default SignInPage;
+export default SignUpPage;

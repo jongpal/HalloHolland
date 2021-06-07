@@ -8,7 +8,7 @@ import { ReviewPage } from './pages/ReviewPage';
 import ApplyPageFirst from './pages/group-farming/ApplyPageFirst';
 import MainNavigator from './components/layout/MainNavigator';
 import SecondApplyPage from './pages/group-farming/SecondApplyPage';
-import SignInPage from './components/auth/SignIn';
+import SignUpPage from './components/auth/SignUp';
 import { ProtectedRoute } from './components/auth/ProtectedRoute';
 import LogInPage from './components/auth/LogInPage';
 import { useContext, useEffect } from 'react';
@@ -70,8 +70,8 @@ function App(props) {
         <Route path="/review">
           <ReviewPage />
         </Route>
-        <Route path="/sign-in">
-          <SignInPage />
+        <Route path="/sign-up">
+          <SignUpPage />
         </Route>
         <Route path="/log-in">
           <LogInPage />

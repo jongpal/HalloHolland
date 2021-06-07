@@ -1,0 +1,31 @@
+.Login{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+    margin-top:100px;
+}
+
+.Login>h1{
+    font-weight: bolder;
+    font-size:var(--title);
+    margin-bottom:50px;
+}
+
+.Login>form{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:350px;
+    height: 100%;
+}
+
+.Login>form .full{
+    width:100%;
+}
+
+.Login>form>input{
+    font-size:var(--plain-text);
+    padding:0.25em;
+    
+}
