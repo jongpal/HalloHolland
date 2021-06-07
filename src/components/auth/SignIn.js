@@ -2,6 +2,7 @@ import { useRef, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import UserContext from './../../store/userContext';
 import { useCookies } from 'react-cookie';
+import './Signup.css';
 // import axios from 'axios';
 
 function SignInPage() {
@@ -58,25 +59,16 @@ function SignInPage() {
   };
 
   return (
-    <div>
-      <h1>Sign In</h1>
+    <div className="SignUp">
+      <h1>Sign Up</h1>
       <form>
-        <div>
-          <label htmlFor="email">email : </label>
-          <input type="email" id="email" required ref={emailRef} />
-        </div>
-        <div>
-          <label htmlFor="name">name : </label>
-          <input type="text" id="name" required ref={nameRef} />
-        </div>
-        <div>
-          <label htmlFor="pwd">password : </label>
-          <input type="password" id="pwd" required ref={passwordRef} />
-        </div>
-        <div>
-          <button onClick={onSubmit}>Sign In</button>
-        </div>
-      </form>
+          {/* <label htmlFor="email">email : </label> */}
+          <input type="email" id="email" placeholder="Email" required ref={emailRef} />        
+          {/* <label htmlFor="name">name : </label> */}
+          <input type="text" id="name" placeholder="Full Name" required ref={nameRef} />        
+          {/* <label htmlFor="pwd">password : </label> */}
+          <input type="password" id="pwd" placeholder="Password" required ref={passwordRef} />        
+          <button className="btn btn-primary full" onClick={onSubmit}>Sign In</button>      </form>
     </div>
   );
 }
