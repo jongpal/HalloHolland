@@ -10,3 +10,6 @@
   top: 20vh;
   left: calc(50% - 15rem);
 }
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

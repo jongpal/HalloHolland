@@ -1,9 +1,10 @@
 .firstQList {
   display: flex;
   flex-direction: column;
+  margin: 10px;
 }
 .firstQList label {
-  margin: 3px;
+  margin: 8px;
   /* color: black;
   background-color: white;
   width: 6rem;
@@ -13,6 +14,17 @@
   box-shadow: grey;
   right: 10%;
   bottom: 10%; */
+}
+.forms div {
+  margin: 10px;
+}
+.btn {
+  all: unset;
+  border: 1px rgba(0, 0, 0, 0.644) solid;
+  padding: 5px;
+  /* width: 7rem; */
+  margin-left: 8px;
+  border-radius: 5px;
 }
 .timetable {
   table-layout: fixed;

@@ -14,10 +14,11 @@ function MatchedUser(props) {
   console.log(filteredUser);
   return (
     <div className={classes.detailmain}>
-      <h1>MatchedUser</h1>
-      {filteredUser.map((user) => {
+      <h1>{filteredUser.length} matched Users</h1>
+      {filteredUser.map((user, index) => {
         return (
           <div className={classes.firstdescript}>
+            <h2>{index + 1}</h2>
             <h3>Name</h3>
             <span>{user.name}</span>
             <h3>Email</h3>

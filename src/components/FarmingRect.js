@@ -201,7 +201,7 @@ function FarmingRect(props) {
         ? showModal && (
             <Modal
               title="This sector is Empty"
-              detail="Want to Apply"
+              detail="Want to Apply ?"
               leftButtonText="cancel"
               onLeftClick={closeModalHandler}
               onRightClick={applyClickHandler}

@@ -18,6 +18,11 @@ import DetailPage from './pages/group-farming/DetailPage';
 import JoinPage from './pages/group-farming/JoinPage';
 import EventDetailPage from './pages/EventDetailPage';
 import MatchedUser from './pages/group-farming/MatchedUser';
+import EventMainPage from './pages/event-pages/EventMainPage';
+import MovieNightEventPage from './pages/event-pages/MovieNightEventPage';
+import ConcertEventPage from './pages/event-pages/ConcertEventPage';
+import GetSomeWisdomEventPage from './pages/event-pages/GetSomeWisdomEventPage';
+import SportsEventPage from './pages/event-pages/SportsEventPage';
 
 function App(props) {
   const [cookies, setCookies] = useCookies(['user']);
@@ -88,8 +93,26 @@ function App(props) {
           componenet={SecondApplyPage}
         />
         <ProtectedRoute path="/matched-users" component={MatchedUser} />
-        <Route path="/event-detail">
+        <Route path="/event-main">
+          <EventMainPage />
+        </Route>
+        <Route path="/event-tastes">
+          <EventPage />
+        </Route>
+        <Route path="/tastes-detail">
           <EventDetailPage />
+        </Route>
+        <Route path="/event-movienight">
+          <MovieNightEventPage />
+        </Route>
+        <Route path="/event-sports">
+          <SportsEventPage />
+        </Route>
+        <Route path="/event-getsomewisdom">
+          <GetSomeWisdomEventPage />
+        </Route>
+        <Route path="/event-concert">
+          <ConcertEventPage />
         </Route>
       </Switch>
     </div>

@@ -70,7 +70,7 @@ function ApplyFormFirst(props) {
   }
   return (
     <Card>
-      <form onSubmit={submitHandler}>
+      <form className={classes.forms} onSubmit={submitHandler}>
         <div>
           <h1>Kinds of crops for your garden</h1>
           <div className={classes.firstQList}>
@@ -159,7 +159,11 @@ function ApplyFormFirst(props) {
             </table>
           </div>
         </div>
-        <button type="submit">GO TO NEXT</button>
+        <div>
+          <button className={classes.btn} type="submit">
+            GO TO NEXT
+          </button>
+        </div>
         {/* <ApplyButton
           onSubmit={submitHandler}
           text="GO TO NEXT"

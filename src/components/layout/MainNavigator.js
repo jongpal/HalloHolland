@@ -36,8 +36,11 @@ function MainNavigator() {
             <Link to="/group-farming">Group Farming</Link>
           </li>
           <li>
-            <Link to="/event">Event</Link>
+            <Link to="/event-main">Event</Link>
           </li>
+          {/* <li>
+            <Link to="/event">Event</Link>
+          </li> */}
           <li>
             <Link to="/board">Board</Link>
           </li>

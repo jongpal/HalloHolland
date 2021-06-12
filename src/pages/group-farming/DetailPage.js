@@ -1,6 +1,6 @@
 import classes from './detail-page.module.css';
 import { useContext, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import FarmContext from './../../store/farmContext';
 
 function DetailPage(props) {
@@ -14,6 +14,7 @@ function DetailPage(props) {
     [0, 0, 0, 0, 0, 0, 0],
   ]);
   const farmContext = useContext(FarmContext);
+  const history = useHistory();
   const data = props.location.state;
   const host = data.host;
   let { sectorId } = useParams();
@@ -23,6 +24,14 @@ function DetailPage(props) {
   const currSector = farmContext.sectors[sectorId - 1];
   console.log(host.photo);
   console.log(host);
+  function joinButtonHandler(event) {
+    event.preventDefault();
+    // console.log('clicked', clickedBox);
+    const data = {
+      sector: sectorId,
+    };
+    history.push(`/join/${data.sector}`, data);
+  }
   return (
     <div className={classes.detailmain}>
       <h1>SECTOR {sectorId} DETAILS</h1>
@@ -99,7 +108,9 @@ function DetailPage(props) {
         </div>
         <div>
           <button className={classes.btn}>CONTACT TO HOST</button>
-          <button className={classes.btnjoin}>JOIN</button>
+          <button onClick={joinButtonHandler} className={classes.btnjoin}>
+            JOIN
+          </button>
         </div>
       </div>
     </div>
