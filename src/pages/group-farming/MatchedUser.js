@@ -2,6 +2,7 @@ import UserContext from './../../store/userContext';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import classes from './matched-user.module.css';
+import defaultImg from './default.png';
 
 function MatchedUser(props) {
   const userContext = useContext(UserContext);
@@ -19,8 +20,19 @@ function MatchedUser(props) {
         return (
           <div className={classes.firstdescript}>
             <h2>{index + 1}</h2>
+            <div>
+              <img
+                className={classes.img}
+                src={
+                  user.photo
+                    ? require(`./../../../public/${user.photo}`).default
+                    : defaultImg
+                }
+              />
+            </div>
             <h3>Name</h3>
             <span>{user.name}</span>
+
             <h3>Email</h3>
             <div>{user.email}</div>
             <h3>Preferred</h3>

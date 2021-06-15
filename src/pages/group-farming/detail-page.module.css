@@ -12,7 +12,7 @@
   flex-direction: column;
 }
 .detailmain div {
-  margin-bottom: 15%;
+  margin-bottom: 10%;
 }
 .detailmain h1 {
   width: 70%;
@@ -25,10 +25,16 @@
   font-weight: 500;
   border-bottom: 1px rgba(128, 128, 128, 0.486) solid;
 }
+.firstdescript p {
+  font-size: 1.2rem;
+}
 .seconddescript h2 {
   width: 50%;
   font-weight: 500;
   border-bottom: 1px rgba(128, 128, 128, 0.486) solid;
+}
+.seconddescript p {
+  font-size: 1.2rem;
 }
 .thirddescript h2 {
   font-weight: 500;
@@ -36,8 +42,13 @@
   border-bottom: 1px rgba(128, 128, 128, 0.486) solid;
 }
 .hostdescript {
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-direction: row; */
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.hostdescript div {
+  margin-bottom: 0;
 }
 /* .hostdescript {
   border-bottom: 1px black solid;
@@ -46,7 +57,10 @@
   all: unset;
   border: 1px rgba(0, 0, 0, 0.644) solid;
   padding: 4px;
-  /* width: 7rem; */
+  width: 12rem;
+  font-size: 1.2rem;
+  height: 3rem;
+  text-align: center;
   margin-right: 5px;
   border-radius: 5px;
 }
@@ -54,7 +68,9 @@
   all: unset;
   border: 1px rgba(0, 0, 0, 0.644) solid;
   padding: 4px;
-  width: 4rem;
+  width: 5rem;
+  height: 3rem;
+  font-size: 1.2rem;
   text-align: center;
   margin-right: 5px;
   border-radius: 5px;
@@ -95,4 +111,16 @@
 .clickedcell {
   background-color: rgba(128, 128, 128, 0.5);
   /* transition: opacity 0.2s; */
+}
+.imgs {
+  width: 100%;
+  /* height: 30%; */
+  border-radius: 10px;
+}
+.ull li {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
 }

@@ -1,8 +1,48 @@
 .sections {
   margin: 5%;
+  /* margin-bottom: 10%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.sectiontwo {
+  /* background-color: rgba(241, 226, 239, 0.295); */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+}
+/* .sectiontwo h2 {
+  font-size: 2rem;
+} */
+.firsth2 {
+  margin-top: 15%;
+  width: 80%;
+  margin-left: 2%;
+  /* margin-right: 0%; */
+}
+.firsth2 h2 {
+  font-weight: 600;
+  font-size: 3rem;
+  margin-bottom: 10%;
+  padding-bottom: 5px;
+}
+.firsth2 p {
+  font-size: 1.2rem;
+}
+.secondh2 {
+  margin-top: 15%;
+  width: 80%;
+  margin-left: 2%;
+}
+.secondh2 h2 {
+  font-weight: 600;
+  font-size: 3rem;
+  margin-bottom: 10%;
+  padding-bottom: 5px;
+}
+.secondh2 p {
+  font-size: 1.2rem;
 }
 
 /*.farmsummary {

@@ -1,5 +1,6 @@
 .modal {
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid gray;
+  box-shadow: 0 1px 4px rgba(84, 202, 104, 0.651);
   border-radius: 6px;
   background-color: white;
   padding: 1rem;
@@ -10,6 +11,20 @@
   top: 20vh;
   left: calc(50% - 15rem);
 }
+.modal p {
+  font-size: 1.2rem;
+}
 * {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.btn {
+  all: unset;
+  border: 1px rgba(0, 0, 0, 0.644) solid;
+  /* padding: 4px; */
+  width: 5rem;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-right: 5px;
+  border-radius: 5px;
 }

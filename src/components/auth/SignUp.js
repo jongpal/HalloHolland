@@ -58,6 +58,7 @@ function SignUpPage() {
       email,
       name,
       pwd,
+      // photo : "images/default.png",
       preferCrops: crop,
       timetable: timet,
     };
@@ -125,7 +126,7 @@ function SignUpPage() {
           />
         </div>
         <div>
-          <label htmlFor="preferCrops">crops : </label>
+          <label htmlFor="preferCrops"></label>
           <input
             type="text"
             id="preferCrops"
@@ -133,7 +134,7 @@ function SignUpPage() {
             ref={cropRef}
           />
         </div>
-        <div>
+        {/* <div>
           <lable htmlFor="timetable">timetable : </lable>
           <div>
             <table className={classes.timetable}>
@@ -171,8 +172,8 @@ function SignUpPage() {
                 })}
               </tbody>
             </table>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
         <div>
           <button className="btn btn-primary full" onClick={onSubmit}>
             Sign Up

@@ -2,6 +2,7 @@ import { useRef, useContext } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import UserContext from './../../store/userContext';
 import FarmContext from './../../store/farmContext';
+import classes from './join-page.module.css';
 
 function JoinPage(props) {
   const userContext = useContext(UserContext);
@@ -33,9 +34,9 @@ function JoinPage(props) {
     history.replace('/group-farming');
   }
   return (
-    <div>
+    <div className={classes.joinmain}>
       <h1>Personal Infos verification</h1>
-      <form onSubmit={submitHandler}>
+      <form className={classes.formmain} onSubmit={submitHandler}>
         <div>
           <label>
             Name :{' '}
@@ -46,6 +47,8 @@ function JoinPage(props) {
               ref={nameRef}
             ></input>
           </label>
+          <br />
+          <br />
           <label>
             Email :{' '}
             <input
@@ -55,7 +58,7 @@ function JoinPage(props) {
               ref={emailRef}
             ></input>
           </label>
-          <div>
+          <div className={classes.btns}>
             <button>Confirm</button>
             <button onClick={cancelHandler}>Cancel</button>
           </div>

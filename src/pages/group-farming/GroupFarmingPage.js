@@ -4,9 +4,10 @@ import FarmingRect from './../../components/FarmingRect';
 
 const DATA_GROUPFARMING_PAGE = {
   id: 1,
-  title: 'Experience Farming',
+  title: 'Experience group Farming',
   image: 'images/group-farming_intro.jpg',
-  description: 'introduction & some guidance & farming infos',
+  description:
+    'Join for group farming and get some fresh product with your neighbors ! ',
 };
 
 function GroupFarmingPage() {
@@ -20,6 +21,33 @@ function GroupFarmingPage() {
         description={DATA_GROUPFARMING_PAGE.description}
         btn={true}
       />
+      <section className={classes.sectiontwo}>
+        <div className={classes.firsth2}>
+          <h2>What is Experience Farming?</h2>
+          <p>
+            The experience garden is a part of a project for facilitating
+            Koedijksgarden's communication.
+            <br />
+            <br />
+            You are going to manage your own garden sector with your random
+            neighbors based on timetables for each of them.
+            <br />
+            <br />
+            You could also participate in numerous events that would be held in
+            this very garden !!
+          </p>
+        </div>
+        <div className={classes.secondh2}>
+          <h2> Then, how do I apply for that ?</h2>
+          <p>
+            Simple. Click the OPEN sectors below ! <br />
+            <br />
+            It will show you the information of that sector. <br />
+            <br />
+            You could join wherever you want.
+          </p>
+        </div>
+      </section>
       <FarmingRect />
 
       {/* <section className={classes.farmsummary}>

@@ -62,13 +62,15 @@ function FarmingRect(props) {
       userContext.allUsers.filter((user) => user.id === hostId)[0] || null;
     console.log(host);
     // currSector.hostId
+    const num = currSector.currNum + '/' + currSector.maxNum || null;
+    const detailText = `crops : ${currSector.crop}` || null;
     if (host != null) {
-      title =
-        `${host.name} ${currSector.currNum} / ${currSector.maxNum}` || null;
+      title = `Hostname : ${host.name} (${num})`;
 
-      detail = `${currSector.crop}` || null;
-      console.log(title, detail);
-      console.log('ocuupied', farmContext.occupiedSector);
+      // detail = `${currSector.crop}` || null;
+      detail = detailText;
+      // console.log(title, detail);
+      // console.log('ocuupied', farmContext.occupiedSector);
       if (farmContext.occupiedSector.some((sector) => sector === clicked - 1)) {
         setIsJoin((prevBool) => false);
         setIsEmpty((prevBool) => false);
