@@ -33,7 +33,7 @@ function MainNavigator() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/group-farming">Group Farming</Link>
+            <Link to="/group-farming">Experience Farming</Link>
           </li>
           <li>
             <Link to="/event-main">Event</Link>

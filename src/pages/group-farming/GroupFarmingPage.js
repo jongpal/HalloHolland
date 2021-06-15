@@ -4,7 +4,7 @@ import FarmingRect from './../../components/FarmingRect';
 
 const DATA_GROUPFARMING_PAGE = {
   id: 1,
-  title: 'group farming Page',
+  title: 'Experience Farming',
   image: 'images/group-farming_intro.jpg',
   description: 'introduction & some guidance & farming infos',
 };

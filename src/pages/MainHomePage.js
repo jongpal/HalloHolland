@@ -49,7 +49,7 @@ function MainHomePage() {
             <img src={groupFarmingImage}></img>
           </div>
           <div className="description">
-            <h3 className="functionName">Group Farming</h3>
+            <h3 className="functionName">Experience Farming</h3>
             <p>
               Gather people to join the farming! You can propose what to plant
               and gather people to do it with you or you can just join in! If
