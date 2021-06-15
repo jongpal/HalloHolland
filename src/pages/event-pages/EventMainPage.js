@@ -17,7 +17,7 @@ function EventMainPage() {
     history.push(`/${event.target.id}`);
   }
   return (
-    <div>
+    <div className={classes.main}>
       <IntroSection
         id={DATA_EVENT_PAGE.id}
         title={DATA_EVENT_PAGE.title}

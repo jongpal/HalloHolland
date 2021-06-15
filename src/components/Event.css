@@ -1,13 +1,15 @@
 .Event{
-    width:1000px;
+    width:1200px;
     height:200px;
     display:flex;
     font-size:var( --plain-text);
     margin:10px 0px;
-    background-color:var(--default-color);
+    background-color:beige;
     text-decoration: none;
     text-decoration-color: none;
     color:black;
+    padding:10px 20px;
+    border-radius: 20px;
 }
 
 .eventImage{
@@ -23,7 +25,7 @@
 
 .Event>.mainDescription{
     display:inline-block;
-    width:35%;
+    width:40%;
     padding: 30px 20px;
 }
 
@@ -33,7 +35,7 @@
 
 .Event>.subDescription{
     display:inline-block;
-    width:35%;
+    width:30%;
     padding: 30px 20px;
 }
 
